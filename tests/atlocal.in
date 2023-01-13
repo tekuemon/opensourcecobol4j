@@ -64,4 +64,3 @@ export LIBPATH="${abs_top_builddir}/libcob/.libs:$LIBPATH"
 export COB_HAS_ISAM
 export COB_SPLITKEY_FLAGS
 
-SKIP_TEST="exit 77"

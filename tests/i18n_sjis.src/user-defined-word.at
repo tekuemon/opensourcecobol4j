@@ -1,5 +1,4 @@
 AT_SETUP([Program name])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -13,7 +12,6 @@ AT_CHECK([${COMPILE} -x prog.cob])
 AT_CLEANUP
 
 AT_SETUP([Field name])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -33,7 +31,6 @@ AT_CHECK([java prog], [0], [Unicode])
 AT_CLEANUP
 
 AT_SETUP([Long field name])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -59,7 +56,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Field lookup])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -79,7 +75,6 @@ AT_CHECK([java prog], [0], [AB])
 AT_CLEANUP
 
 AT_SETUP([Section name])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -102,7 +97,6 @@ AT_CHECK([java prog], [0], [Hello, and good bye.])
 AT_CLEANUP
 
 AT_SETUP([Long section name])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -149,7 +143,6 @@ prog.cob:9: Error: User defined name must be less than 32 characters
 AT_CLEANUP
 
 AT_SETUP([Nihongo Filename])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -185,7 +178,6 @@ AT_CHECK([java prog], [0], [OK])
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in numeric test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -209,7 +201,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in BASED test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -231,7 +222,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in ODO test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -254,7 +244,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in Subscript test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -277,7 +266,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in length of ref_mod test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -300,7 +288,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in offset of ref_mod test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -323,7 +310,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in length of N_refmod test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -346,7 +332,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in offset of N_refmod test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.
@@ -369,7 +354,6 @@ AT_CHECK([java prog], [1], [],
 AT_CLEANUP
 
 AT_SETUP([Nihongo field name in extaddr test msg.])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION    DIVISION.

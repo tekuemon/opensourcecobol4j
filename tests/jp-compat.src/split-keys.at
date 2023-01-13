@@ -1,5 +1,4 @@
 AT_SETUP([SPLIT KEYS (ALTERNATE KEY)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "yes" || exit 77])
 
@@ -52,7 +51,6 @@ AT_CHECK([java prog], [0], [BBBB])
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (ALTERNATE KEY - NOT YET)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "no" || exit 77])
 
@@ -107,7 +105,6 @@ prog.cob:38: Warning: 'SPLIT KEYS' not implemented
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (RECORD KEY)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "yes" || exit 77])
 
@@ -172,7 +169,6 @@ AT_CHECK([java prog], [0], [ALT2])
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (RECORD KEY - NOT YET)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "no" || exit 77])
 
@@ -240,7 +236,6 @@ prog.cob:50: Warning: 'SPLIT KEYS' not implemented
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (START Syntax - EQUAL)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "yes" || exit 77])
 
@@ -305,7 +300,6 @@ AT_CHECK([java prog], [0], [ALT2])
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (START Syntax - EQUAL - NOT YET)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "no" || exit 77])
 
@@ -373,7 +367,6 @@ prog.cob:49: Warning: 'SPLIT KEYS' not implemented
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (START Syntax - GREATER THAN)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "yes" || exit 77])
 
@@ -438,7 +431,6 @@ AT_CHECK([java prog], [0], [ALT3])
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (START Syntax - GREATER THAN - NOT YET)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "no" || exit 77])
 
@@ -506,7 +498,6 @@ prog.cob:49: Warning: 'SPLIT KEYS' not implemented
 AT_CLEANUP
 
 AT_SETUP([SPLIT KEYS (key unmatch)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_CHECK([test $COB_SPLITKEY_FLAGS = "yes" || exit 77])
 

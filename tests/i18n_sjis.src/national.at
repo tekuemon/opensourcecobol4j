@@ -1,5 +1,4 @@
 AT_SETUP([FUNCTION NATIONAL single-byte])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -21,7 +20,6 @@ AT_CHECK([java prog], [0], [Ç`ÇaÇbÇcÇy])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL multi-byte])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -43,7 +41,6 @@ AT_CHECK([java prog], [0], [Ç`ÇaÇbÇPÇQÇR])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL KIGOU-exclamation])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -65,7 +62,6 @@ AT_CHECK([java prog], [0], [ÅIÅIÅIÅIÅI])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL KIGOU-yen])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -87,7 +83,6 @@ AT_CHECK([java prog], [0], [Åè        ])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL KIGOU-plus])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -109,7 +104,6 @@ AT_CHECK([java prog], [0], [Å{Å@      ])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL (HanKana w/ Daku-on)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -131,7 +125,6 @@ AT_CHECK([java prog], [0], [ÉåÉfÉBÉKÉKÅ@Å@Å@])
 AT_CLEANUP
 
 AT_SETUP([FUNCTION NATIONAL (HanKana w/ Han-daku-on)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -153,7 +146,6 @@ AT_CHECK([java prog], [0], [É|ÉsÉìÅ@Å@])
 AT_CLEANUP
 
 AT_SETUP([N Literal (NO zenakaku conversion)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -179,7 +171,6 @@ ABC
 AT_CLEANUP
 
 AT_SETUP([NC Literal (NO zenakaku conversion)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -205,7 +196,6 @@ ABC
 AT_CLEANUP
 
 AT_SETUP([ND Literal (NO zenakaku conversion)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -231,7 +221,6 @@ ABC
 AT_CLEANUP
 
 AT_SETUP([NX Literal])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.

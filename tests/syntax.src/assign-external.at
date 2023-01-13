@@ -1,5 +1,4 @@
 AT_SETUP([ASSIGN TO DYNAMIC create file (assign_external)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.

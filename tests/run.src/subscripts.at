@@ -26,7 +26,6 @@
 # 1) TODO
 
 AT_SETUP([non-numeric subscript])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -55,7 +54,6 @@ AT_CLEANUP
 # 2) DONE
 
 AT_SETUP([The range of subscripts])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -96,7 +94,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds (1)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -121,7 +118,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds (2)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -145,7 +141,6 @@ AT_CHECK([java prog], [1], ,
 AT_CLEANUP
 
 AT_SETUP([Subscript out of bounds (3-1)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -169,7 +164,6 @@ AT_CHECK([java prog], [1], ,
 AT_CLEANUP
 
 AT_SETUP([Subscript out of bounds (3-2)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -193,7 +187,6 @@ AT_CHECK([java prog], [1], ,
 AT_CLEANUP
 
 AT_SETUP([Subscript out of bounds (3-3)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -217,7 +210,6 @@ AT_CHECK([java prog], [1], ,
 AT_CLEANUP
 
 AT_SETUP([Subscript out of bounds (3-4)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -241,7 +233,6 @@ AT_CHECK([java prog], [1], ,
 AT_CLEANUP
 
 AT_SETUP([Value of DEPENDING ON N out of bounds (lower)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -266,7 +257,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Value of DEPENDING ON N out of bounds (upper)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -337,7 +327,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript bounds with ODO])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -364,7 +353,6 @@ AT_CLEANUP
 ##
 
 AT_SETUP([Subscript by arithmetic expression])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -388,7 +376,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds in MOVE (1)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -413,7 +400,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds in MOVE (2)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -438,7 +424,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds without debug])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -461,7 +446,6 @@ AT_CLEANUP
 
 
 AT_SETUP([Subscript out of bounds check option])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.

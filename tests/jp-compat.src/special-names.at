@@ -1,5 +1,4 @@
 AT_SETUP([ACCEPT ARGUMENT-NUMBER])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -23,7 +22,6 @@ AT_CHECK([java prog this is arg], [0], [03])
 AT_CLEANUP
 
 AT_SETUP([ACCEPT ARGUMENT-VALUE])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -48,7 +46,6 @@ AT_CHECK([java prog this is arg], [0], [arg     ])
 AT_CLEANUP
 
 AT_SETUP([ACCEPT ENVIRONMENT-VALUE])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -73,7 +70,6 @@ AT_CHECK([export TESTENV=envvalue && java prog], [0], [envvalue])
 AT_CLEANUP
 
 AT_SETUP([DISPLAY ARGUMENT-NUMBER])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -98,7 +94,6 @@ AT_CHECK([java prog this is arg], [0], [arg     ])
 AT_CLEANUP
 
 AT_SETUP([DISPLAY ENVIRONMENT-NAME])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -123,7 +118,6 @@ AT_CHECK([export TESTENV=envvalue && java prog], [0], [envvalue])
 AT_CLEANUP
 
 AT_SETUP([DISPLAY ENVIRONMENT-VALUE])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.

@@ -1,6 +1,4 @@
 AT_SETUP([PROGRAM-STATUS])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION   DIVISION.
@@ -16,7 +14,6 @@ AT_CHECK([java prog], [99])
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS (alias SORT-RETURN)])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
@@ -33,8 +30,6 @@ AT_CHECK([java prog], [0], [+000000016])
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS (Break in input section)])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
@@ -99,8 +94,6 @@ AT_CHECK([if test -f output.txt ; then echo -n NG ; else echo -n OK ; fi], [0], 
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS (Break in output section)])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
@@ -165,8 +158,6 @@ AT_CHECK([cat output.txt], [0], [0103])
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS (Break in section with THRU)])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
@@ -235,8 +226,6 @@ AT_CHECK([cat output.txt], [0], [0103])
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS break in MERGE])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
@@ -297,8 +286,6 @@ AT_CHECK([cat output.txt], [0], [0103])
 AT_CLEANUP
 
 AT_SETUP([SORT-STATUS break with No SORT-STATUS in pgm])
-AT_CHECK([${SKIP_TEST}])
-AT_CHECK([${SKIP_TEST}])
 
 AT_DATA([prog.cob], [
        IDENTIFICATION       DIVISION.
