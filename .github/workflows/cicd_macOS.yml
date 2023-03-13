@@ -26,6 +26,10 @@ jobs:
 #          dnf -y update
 #          dnf install -y java-17-openjdk-devel gcc gcc-c++ make bison flex automake autoconf diffutils gettext
 
+      - name: Install dependencies on macOS 12
+        run: |
+          softwareupdate --install --all
+
       - name: Checkout opensource COBOL 4J
         uses: actions/checkout@v2
       
