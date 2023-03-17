@@ -1,55 +1,17 @@
-name: test
-on:
-  push:
-  pull_request:
-    types: [opened, reopened, review_requested, synchronize]
-    
+name: Java CI
+
+on: [push]
+
 jobs:
-  TestMaven:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-
-      - name: Install jdk
-        run: |
-          apt update -y
-          apt install -y default-jdk
-          java -version
-          javac -version
-
-      - name: Compile & Run Test
-        run: |
-          echo 'public class Hello{ public static void main(String[] args){System.out.println("Hello world"); } } ' > Hello.java
-          javac Hello.java
-          java Hello
-      
-      - name: Compile & Run Test 2
-        run: |
-          echo 'public class WithArg{ public static void main(String[] args){System.out.println("See it, " + args[0]); } } ' > WithArg.java
-          javac WithArg.java
-          java WithArg this-is-argument
-
-      - name: Install Maven
-        run: |
-          apt install -y maven
-          mvn -version
-
-      - name: Make Sample project
-        run: mvn archetype:generate \
-        -DarchetypeArtifactId=maven-archetype-quickstart \
-        -DinteractiveMode=false \
-        -DgroupId=com.sample \
-        -DartifactId=mvn-example
-      
-      - name: Check dir
-        run: |
-          cd mvn-example
-          ls -R
-      
-      - name: Compile
-        run: mvn compile
-
-      - name: Check target dir
-        run: ls target -R
-      
-      - name: Run by mvn
-        run: mvn exec:java -Dexec.mainClas=com.sample.App
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots package
