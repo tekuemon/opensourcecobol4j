@@ -25,7 +25,9 @@ jobs:
           mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
       
       - name: Compile sample project
-        run: mvn compile
+        run: |
+          cd my-app
+          mvn package
       
       - name: Run sample project
-        run: mvn exec:java -Dexec.mainClass=com.mycompany.app.App
+        run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
