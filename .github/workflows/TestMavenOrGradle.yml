@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Install
         run: |
-          apt update
+          apt update -y
           apt install -y default-jdk maven
 
       - name: til package sample project
