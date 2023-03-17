@@ -45,10 +45,10 @@ jobs:
       image: ${{ matrix.os }}
     steps:
 
-      - name: Install JDK
+      - name: Install 
         run: |
           apt update -y
-          apt install -y default-jdk
+          apt install -y default-jdk wget unzip
       
       - name: Install gradle
         run: |
