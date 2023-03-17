@@ -14,16 +14,18 @@ jobs:
     container:
       image: ${{ matrix.os }}
     steps:
-    
+
       - name: Install
         run: |
           apt update -y
           apt install -y default-jdk maven
 
-      - name: til package sample project
+      - name: make sample project
         run: |
           mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-          mvn package
+      
+      - name: Package sample project
+        run: mvn package
       
       - name: Run sample project
         run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
