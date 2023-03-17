@@ -20,14 +20,18 @@ jobs:
           apt update -y
           apt install -y default-jdk maven
 
+      - name: Checkout 
+        uses: actions/checkout@v3
+
       - name: Make sample project
         run: |
           mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
       
-      - name: Compile sample project
+      - name: Package sample project
         run: |
           cd my-app
           mvn package
+          ls target
       
       - name: Run sample project
         run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
