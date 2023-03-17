@@ -1,12 +1,20 @@
 name: test
 
-on: [push]
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, review_requested, synchronize]
 
 jobs:
-  runs-test:
+  run-tests:
+    strategy:
+      matrix:
+        os: ["ubuntu:22.04"]
     runs-on: ubuntu-latest
-
+    container:
+      image: ${{ matrix.os }}
     steps:
+    
       - name: Install
         run: |
           apt update -y
