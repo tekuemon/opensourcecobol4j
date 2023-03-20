@@ -6,9 +6,6 @@ jobs:
   maven-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Update
-        run: apt update -y
-
       - uses: actions/checkout@v3
 
       - name: Set up JDK 17
@@ -23,9 +20,6 @@ jobs:
   gradle-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Update
-        run: apt update -y
-
       - name: Checkout project sources
         uses: actions/checkout@v2
 
