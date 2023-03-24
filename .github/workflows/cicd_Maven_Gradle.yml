@@ -6,10 +6,9 @@ jobs:
   maven-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout project sources
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup JDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
@@ -19,6 +18,7 @@ jobs:
         run: | 
           cd libcobj
           mvn --batch-mode --update-snapshots package
+          cd ..
   
   gradle-tests:
     runs-on: ubuntu-latest
@@ -26,17 +26,14 @@ jobs:
       - name: Checkout project sources
         uses: actions/checkout@v3
 
-      - name: Setup JDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'temurin'
+          distribution: 'adopt'
 
-      - name: Change directory
-        run: cd libcobj
-      
       - name: Build with Gradle
-        uses: ./gradlew build
-
-      - name: Change directory again
-        run: cd ..
+        run: |
+          cd libcobj
+          gradle build --scan
+          cd ..
