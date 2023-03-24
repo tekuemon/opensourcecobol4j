@@ -62,12 +62,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      
-      - name: Copy libcobj directory contents to root directory
-        run: cp libcobj/* 
 
       - name: Build with Maven
         run: |
+          cp libcobj/* 
           ls
           mvn -B package --file pom.xml
           mkdir staging && cp target/*.jar staging
@@ -78,6 +76,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
+          cp libcobj/* 
           ls
           gradle build --scan
           cp target/*.jar staging
