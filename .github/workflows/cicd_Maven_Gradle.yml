@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup JDK 17
         uses: actions/setup-java@v3
@@ -35,7 +35,7 @@ jobs:
         run: cd libcobj
       
       - name: Build with Gradle
-        uses: ./gradle build
+        uses: ./gradlew build
 
       - name: Change directory again
         run: cd ..
