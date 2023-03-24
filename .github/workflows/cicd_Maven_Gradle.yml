@@ -31,14 +31,11 @@ jobs:
           java-version: 17
           distribution: 'temurin'
 
-      - name: Setup gradle
-        run: ls /root/
-
       - name: Change directory
         run: cd libcobj
       
       - name: Build with Gradle
-        run: ./gradlew build
+        uses: gradle build
 
       - name: Change directory again
         run: cd ..
