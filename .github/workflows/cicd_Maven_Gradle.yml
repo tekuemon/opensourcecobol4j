@@ -34,4 +34,4 @@ jobs:
       - name: Build with Gradle
         run: |
           cd libcobj
-          gradle build --all
+          gradle build --scan
