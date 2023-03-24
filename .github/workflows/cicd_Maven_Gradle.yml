@@ -22,6 +22,10 @@ jobs:
           mvn -B package --file pom.xml
           mkdir staging && cp target/*.jar staging
           cd ..
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: staging
   
   gradle-tests:
     runs-on: ubuntu-latest
