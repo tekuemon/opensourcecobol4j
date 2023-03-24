@@ -1,7 +1,9 @@
 name: TestMavenOrGradle
 
-on: [push]
-  branches: 'origin/develop'
+on: 
+  push:
+    branches:
+      - 'origin/develop'
 
 jobs:
   maven-tests:
