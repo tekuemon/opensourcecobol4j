@@ -31,13 +31,6 @@ jobs:
           java-version: 17
           distribution: 'adopt'
 
-    - name: restore gradle cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          /root/.gradle/caches
-          /root/.gradle/wrapper
-
       - name: Change directory
         run: cd libcobj
       
