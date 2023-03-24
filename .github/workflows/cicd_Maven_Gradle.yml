@@ -31,14 +31,11 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
       - name: Build with Gradle
         run: |
           cd libcobj
-        #  gradle build
-        #  cd ..
-
-      - uses: gradle/gradle-build-action@v2
-        env:
-          CI: true
-        with:
-          arguments: build
+          ./gradlew build
+          cd ..
