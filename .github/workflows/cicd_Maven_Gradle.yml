@@ -3,7 +3,7 @@ name: TestMavenOrGradle
 on: 
   push:
     branches:
-      - 'origin/develop'
+      - main
 
 jobs:
   maven-tests:
